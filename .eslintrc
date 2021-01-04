@@ -1,0 +1,20 @@
+{
+  "parser": "@typescript-eslint/parser",
+  // "plugins": ["@typescript-eslint"],
+  "extends": [
+    "airbnb-base", 
+    "plugin:@typescript-eslint/recommended", 
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint" //prettier의 규칙과 충돌하는 규칙 비활성화
+  ],
+  "rules": {
+    "no-console": "off",
+      "no-restricted-syntax": [
+        "error",
+        {
+            "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+            "message": "Unexpected property on console object was called"
+        }
+      ]
+  }
+}
