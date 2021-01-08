@@ -1,12 +1,14 @@
 {
   "parser": "@typescript-eslint/parser",
-  // "parserOptions": {
-  //   "project": "./tsconfig.json"
-  // },
-  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "extends": [
-    "airbnb-base", 
-    "plugin:@typescript-eslint/recommended", 
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint" //prettier의 규칙과 충돌하는 규칙 비활성화
   ],
@@ -15,22 +17,11 @@
     "no-restricted-syntax": [
       "error",
       {
-          "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
-          "message": "Unexpected property on console object was called"
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        "message": "Unexpected property on console object was called"
       }
     ],
-    "import/extensions": [
-      {
-        "js": "never",
-        "ts": "never"
-      }
-   ]
+    "import/extensions": 0,
+    "import/no-unresolved": 0
   }
-  // "settings": {
-  //   "import/resolver": {
-  //     "node": {
-  //       "extensions": [".js", ".jsx", ".ts", ".tsx"]
-  //     }
-  //   }
-  // }
 }
