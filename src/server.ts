@@ -1,5 +1,6 @@
 import express from 'express';
 import http from 'http';
+import './config/env.platform';
 
 import sign from './product/customLogin/router';
 
