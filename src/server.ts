@@ -1,7 +1,7 @@
 import express from 'express';
 import { createServer } from 'http';
 import router from './router';
-import './config/env.platform';
+import './config/platform/env.config';
 
 const app = express();
 
