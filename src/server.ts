@@ -5,6 +5,8 @@ import './config/platform/env.config';
 
 const app = express();
 
+app.use(express.json());
+
 app.use('/api', router);
 
 createServer(app).listen(process.env.PORT || 8080, () => {
