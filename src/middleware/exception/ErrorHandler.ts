@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { BaseError } from '../../lib/expeption';
+import { BaseError } from '../../component/expeption';
 
 const ErrorResponse = (
 	err: Error,
