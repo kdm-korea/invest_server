@@ -1,7 +1,7 @@
 import { Role } from '../../../component/enum/Role';
 
-export interface KakaoAuthDto {
-	uuid: string;
+export interface KakaoUserDto {
+	snsId: string;
 
 	snsKind: string;
 
