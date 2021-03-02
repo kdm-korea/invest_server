@@ -1,11 +1,9 @@
 import express from 'express';
-import customLogin from './product/customLogin/router';
-import snsLogin from './product/snsLogin/router';
+import mongoose from 'mongoose';
+import snsLogin from './api/snsLogin/router';
 import { NotFoundHandler, ErrorHandler } from './middleware/exception';
 
 const router = express.Router();
-
-router.use('/', customLogin);
 
 router.use('/', snsLogin);
 
