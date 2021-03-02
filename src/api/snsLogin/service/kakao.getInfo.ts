@@ -5,7 +5,7 @@ import {
 	NotFoundError,
 	UnauthorizedError,
 } from '../../../util/expeption';
-import { KakaoAuthDto } from '../dto/kakaoAuth.dto';
+import { KakaoUserDto } from '../dto/KakaoUser.dto';
 
 /**
  * @Request
@@ -14,7 +14,7 @@ import { KakaoAuthDto } from '../dto/kakaoAuth.dto';
  * @Response
  * @param uuid
  */
-const getKakaoId = async (accessToken: string): Promise<KakaoAuthDto> => {
+const getKakaoId = async (accessToken: string): Promise<KakaoUserDto> => {
 	const config = {
 		headers: {
 			Authorization: accessToken,
@@ -27,7 +27,7 @@ const getKakaoId = async (accessToken: string): Promise<KakaoAuthDto> => {
 
 	if (recode.status === 200) {
 		return {
-			uuid: recode.data.id,
+			snsId: recode.data.id,
 			snsKind: 'kakao',
 			role: Role.CUSTOMER,
 		};
