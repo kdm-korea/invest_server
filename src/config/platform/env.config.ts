@@ -20,4 +20,4 @@ switch (process.env.NODE_ENV) {
 		break;
 }
 
-dotenv.config({ path: path.join(__dirname, '../../', envDir) });
+dotenv.config({ path: path.join(__dirname, '../../../', envDir) });
